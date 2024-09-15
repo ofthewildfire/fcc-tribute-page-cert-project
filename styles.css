@@ -1,0 +1,185 @@
+/* css variables */
+
+:root {
+  --navy_blue: #1f3c88;
+  --white: #fff;
+  --green: #3f9;
+}
+
+/*=============================================
+=            Typography            =
+=============================================*/
+/* Merriweather for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', serif;
+}
+
+/* Lato for body text */
+body,
+p {
+  font-family: 'Lato', sans-serif;
+}
+/*=====  End of Typography  ======*/
+
+/*=============================================
+=            Styles body generic            =
+=============================================*/
+body {
+  /* background-color: #f7f7f7; */
+  /* background-color: rgb(40, 108, 102); */
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--green);
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+main {
+  padding: 3em 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  flex-wrap: wrap;
+  height: 10vh;
+}
+
+.nav > li > a {
+  text-decoration: 2px solid var(--navy_blue);
+  color: black;
+  /* background-color: var(--navy_blue); */
+  padding: 0 0.5em;
+  gap: 0.625rem;
+}
+
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100vh;
+  padding: 2em 0;
+  background-color: white;
+}
+
+#intro > figure,
+#intro > div {
+  width: 50%;
+}
+
+#image {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  height: 60vh;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.intro__text {
+  text-align: center;
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.hero-nav > li > a {
+  text-decoration: none;
+  color: var(--navy_blue);
+  background-color: #3f9;
+  padding: 0 1.5em;
+  height: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=====  End of Styles body generic  ======*/
+
+/**
+ *
+ * sections for content
+ *
+ */
+
+* {
+  scroll-behavior: smooth;
+}
+
+#introduction {
+  padding-top: 10em;
+}
+
+.bio {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5625rem;
+}
+
+.bio > section {
+  padding-bottom: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+section > h2 {
+  padding-bottom: 1em;
+  color: var(--navy_blue);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.bio > section > p {
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+.bio > section > h2::before {
+  content: '# -- ';
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-bottom: 0.5em;
+}
+
+.bio > section:nth-of-type(2n) {
+  clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: orange;
+  padding-top: 5em;
+}
+
+#introduction {
+  clip-path: polygon(0 28%, 100% 0, 100% 100%, 0 100%);
+  /* background-color: var(--navy_blue); */
+}
+
+figcaption {
+  color: rgb(36, 35, 35);
+  font-size: 0.75rem;
+  text-align: center;
+  font-style: italic;
+}
